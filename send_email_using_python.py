@@ -29,16 +29,16 @@ class Send_Email(object):
                 for i in a:
                     #print(i)
                     self.message += i
-#        except IOError as e:
-#            print(f"An error occured: {e}")
-#
+        except IOError as e:
+            print(f"An error occured: {e}")
+
     def delete_content_of_file(self):
         try:
             with open(str(self.file_name), "w"):
                 pass
-#        except IOError as e:
-#            print(f"An error occured: {e}")
-#
+        except IOError as e:
+            print(f"An error occured: {e}")
+
     def report(self):
         self.read_content_of_file()
         if len(self.message) > 0:
